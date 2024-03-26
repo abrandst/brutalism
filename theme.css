@@ -15,7 +15,7 @@
 Github: https://github.com/zcysxy/Obsidian-Terminal-Theme
 *********************************************************/
 
-/* Style Settings */
+/* Style Settings */ 
 /* @settings
 
 name: Brandy
@@ -173,7 +173,7 @@ settings:
   --the-color: #15C00d;
   --the-color-muted: #15750d;  
   --the-color-rgb: 35, 255, 24;
-  --the-background-color: #000000;
+  --the-background-color: #000000;  
   --the-border-style: thick double var(--the-color-muted);
   --the-font: 'Ac437 IBM VGA 9x16', 'Courier New';
   --font-monospace-theme: 'Ac437 IBM VGA 9x16','Courier New';
@@ -240,7 +240,13 @@ input {
 
   font-style: normal;
 }
+.callout {
+  /*background-color: ;
+  color: var(--the-background-color);*/
+  border: var(--the-sborder-style);
+}
 .theme-dark {
+  --callout-default: var(--the-background-color);
   --text-on-accent-inverted: #00dd00;
   --background-primary: var(--the-background-color);
   --background-primary-alt: var(--the-background-color);
@@ -306,7 +312,12 @@ input[type='number'] {
   font-size: var(--the-font-size);
   font-family: var(--the-font);
 }
-
+.embed-title {
+  font-weight: normal;  
+}
+.callout-title-inner {
+  font-weight: normal;
+}
 .checkbox-container:after {
   background-color: var(--the-color);
 }
@@ -954,19 +965,19 @@ input[type='range']::-webkit-slider-thumb {
 /********************************************/
 .mod-right-split {
   margin-left: -1px;
-  border-left: var(--the-border-style);
+  
   /* border-bottom: 1px solid var(--the-color); */
 }
 .mod-left-split {
-  border-right: var(--the-border-style);
+  
   /* border-bottom: 1px solid var(--the-color); */
 }
 /* Hider specific */
 /* .hider-frameless .workspace-split.mod-left-split > div.workspace-tabs {
   padding: 0;
 } */
-.workspace-leaf-resize-handle:not(:hover) {
-  background-color: transparent;
+.workspace-leaf-resize-handle {
+  
 }
 .workspace-tabs + .workspace-tabs {
   margin-top: -1px;
@@ -1462,32 +1473,10 @@ button.document-search-button:not([aria-label]):before {
 .empty-state-title {
   margin-top: 0;
 }
-/* Empty right sidebar */
-.mod-right-split .u-muted:before {
-  content: "\A\A    |\\__/,|   (`\\\A  _.|o o  |_   ) )\A-(((---(((--------\A";
-  white-space: pre;
-}
-.mod-left-split .u-muted:before {
-  content: "    /\\___/\\\A     `)9 9('\A     {_:Y:.}_\A----( )U-'( )----------\A     ```   '''\A";
-  white-space: pre;
-}
-.suggestion-empty {
-  font-size: var(--the-font-size);
-  line-height: calc(0.8 * var(--editor-line-height));
-}
-.suggestion-empty:before {
-  content: ' _      _      _\A __(.)< __(.)> __(.)=\A \\___)  \\___)  \\___) \A';
-  white-space: pre;
-}
+
 div.search-empty-state {
   font-size: var(--the-font-size);
   line-height: calc(0.8 * var(--editor-line-height));
-}
-div.search-empty-state:before {
-  content: '        (\\ /)\A        ( . .)\A        c(")(")\A';
-  white-space: pre;
-  font-style: italic;
-  letter-spacing: -3px;
 }
 
 
