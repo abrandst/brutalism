@@ -170,13 +170,13 @@ settings:
 /* Root Variables */
 :root {  
   /*--h1-font: "Good Times";*/
-  --the-color: #15C00d;
+  --the-color: #15A00d;
   --the-color-muted: #15750d;  
   --the-color-rgb: 35, 255, 24;
   --the-background-color: #000000;  
   --the-border-style: thick double var(--the-color-muted);
   --the-font: 'Ac437 IBM VGA 9x16', 'Courier New';
-  --font-monospace-theme: 'Ac437 IBM VGA 9x16','Courier New';
+  --font-monospace-theme: 'Ac437 IBM VGA 9x1d6','Courier New';
   --the-font-size: 26px;    
   --editor-line-height: 1.3;
   --char-width: calc(0.625 * var(--the-font-size)); /* the ratio is determined by the font-family */
@@ -246,6 +246,7 @@ input {
   border: var(--the-sborder-style);
 }
 .theme-dark {
+  --font-ui-smaller: var(--the-font-size);
   --callout-default: var(--the-background-color);
   --text-on-accent-inverted: #00dd00;
   --background-primary: var(--the-background-color);
@@ -782,8 +783,7 @@ input.prompt-input {
 .suggestion-item {
   font-size: var(--the-font-size);
   padding: 0 0 0 15px;
-  border-width: 0;
-  height: calc(var(--editor-line-height) * 1em);
+  border-width: 0;  
 }
 /* .is-selected {
   border-style: solid;
@@ -1029,9 +1029,7 @@ input[type='range']::-webkit-slider-thumb {
 /* Show more content icons */
 .search-result-hover-button.mod-top:before,
 .search-result-hover-button.mod-bottom:before {
-  width: 16px;
-  font-size: 13px;
-  font-weight: bold;
+  width: 16px;  
   position: relative;
   background-color: transparent;
 }
@@ -1620,3 +1618,28 @@ button:focus:after {
   border-color: var(--the-color);
   z-index: 9999;
 } */
+
+
+.omnisearch-result__extension,.omnisearch-result__folder-path,.omnisearch-result__body {
+  font-size: var(--the-font-size);
+}
+
+.omnisearch-result__extension,.omnisearch-result__title{
+  font-size: var(--the-font-size);
+  color: var(--the-background-color);
+  background-color: var(--the-color-muted);
+}
+
+.omnisearch-result__extension,.omnisearch-result__folder-path,.omnisearch-result__body,.omnisearch-result__counter  {
+  font-size: var(--the-font-size);
+}
+
+
+.omnisearch-result__counter::before {
+  content: "   "; 
+  
+}
+
+.search-results-info, .dropdown {
+  font-size: var(--the-font-size);
+}
